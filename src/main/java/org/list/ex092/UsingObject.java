@@ -16,5 +16,32 @@ public class UsingObject {
 
         Object obj1 = new Object();
         Object obj2 = new Object();
+
+        System.out.println(obj1.hashCode());
+        System.out.println(obj1 == obj2);
+        System.out.println(obj1.equals(obj2));
+        System.out.println(obj1);
+        System.out.println(obj2.toString());
+
+        System.out.println(obj1.getClass().getName());  // 클래스 이름
+        String str = obj1.getClass().getName() + "@" + Integer.toHexString(obj1.hashCode());
+        System.out.println(str);
+
+        Object objstr = new String("Good");     // 다형성
+        System.out.println(objstr.toString());          // 클래스명@hashCode...이 아니네;; String 객체인 경우 "문자열" 을 출력함
+        System.out.println(objstr instanceof Object);
+        System.out.println(objstr instanceof String);
+
+        Class classes = obj1.getClass();
+        System.out.println(classes.getName());          // 클래스 이름
+        System.out.println("---------- constructor ----------");
+        Constructor[] cons = classes.getDeclaredConstructors();     // 클래스의 모든 생성자를 리턴. 생성자에 대한 모든 정보는 java.lang.refelct.Constructor를 이용해 얻음. 모든 생성자를 리턴하기 때문에 배열로 받음
+        System.out.println("> length of cons: " + cons.length);
+        for (int i = 0; i < cons.length; i++) {
+            System.out.println(cons[i].getName());
+        }
+        for (Constructor con : cons) {
+            System.out.println(con.getName());
+        }
     }
 }
