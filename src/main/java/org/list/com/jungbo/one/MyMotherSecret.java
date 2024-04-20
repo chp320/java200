@@ -1,4 +1,4 @@
-package org.list.ex138.com.jungbo.one;
+package org.list.com.jungbo.one;
 
 public class MyMotherSecret {
     // 멤버 변수

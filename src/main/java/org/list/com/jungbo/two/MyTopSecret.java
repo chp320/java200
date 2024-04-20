@@ -1,5 +1,5 @@
-package org.list.ex138.com.jungbo.two;
-import org.list.ex138.com.jungbo.one.MyMotherSecret;
+package org.list.com.jungbo.two;
+import org.list.com.jungbo.one.MyMotherSecret;
 
 public class MyTopSecret extends MyMotherSecret {
 
