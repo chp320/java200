@@ -55,3 +55,21 @@ java -jar ~/IdeaProjects/java200/src/main/java/org/list/com/jungbo/code/test2/se
 ```shell
 javadoc -use ~/IdeaProjects/java200/src/main/java/org/list/com/jungbo/one/*.java ~/IdeaProjects/java200/src/main/java/org/list/com/jungbo/two/*.java ~/IdeaProjects/java200/src/main/java/org/list/com/jungbo/three/*.java
 ```
+
+<hr>
+
+## javap 이용하기
+- 목적: 클래스 내의 모든 메서드를 확인 가능 !!
+- 컴파일 된 소스(.class)를 이용하여 디스어셈블(disassemble)하여 자바 소스(.java)로 변경 없이 클래스/메서드/생성자 등 골격 확인 가능
+```shell
+javap 
+$ javap org.list.com.jungbo.two.MyTopSecret
+Compiled from "MyTopSecret.java"
+public class org.list.com.jungbo.two.MyTopSecret extends org.list.com.jungbo.one.MyMotherSecret {
+  java.lang.String myBoyFriend;
+  public org.list.com.jungbo.two.MyTopSecret(int, java.lang.String, double, java.lang.String);
+  public org.list.com.jungbo.two.MyTopSecret();
+  public java.lang.String toString();
+}
+```
+- 만일 다른 위치의 클래스를 확인하고 싶은 경우 경로를 설정(-classpath)하면 됨
