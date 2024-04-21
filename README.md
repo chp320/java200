@@ -73,3 +73,17 @@ public class org.list.com.jungbo.two.MyTopSecret extends org.list.com.jungbo.one
 }
 ```
 - 만일 다른 위치의 클래스를 확인하고 싶은 경우 경로를 설정(-classpath)하면 됨
+
+<hr>
+
+## enum (Enumerations)
+- 목적: enum 을 선언하고 메서드 활용하기 !!
+- 관련: ex096
+- 설명
+  - enum 내 변수(자동으로 상수로 등록됨)를 먼저 선언해야 멤버와 메서드 선언 가능 !!
+  - enum 값을 비교하는 메서드 중 compareTo() : 비교하는 값들의 인덱스 차이값 반환
+  ```
+  a.compareTo(b) => a.ordinal() - b.ordinal()
+  참고) https://wickies.tistory.com/38
+  ```
+
