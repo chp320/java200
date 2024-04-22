@@ -3,7 +3,7 @@
 1) 쓰레드 생성 2가지 방법 - 쓰레드 상속(extends), Runnable 구현(implements)
 2) 쓰레드 주요 메서드 - run(), sleep()
 3) 쓰레드 우선 순위 변경
-4) 쓰레드 자원 공유 & 동기화
+4) 쓰레드 자원 공유 & 동기화(synchronized)
 5) 쓰레드 사이의 통신 (wait, notifyall)
 6) 채팅을 통한 쓰레드 확인
 ```
